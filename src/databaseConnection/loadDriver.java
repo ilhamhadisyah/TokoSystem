@@ -19,12 +19,12 @@ public class loadDriver {
     public void connect(){ // database connection (needed in any conection)
 
         try {
-            //String url ="jdbc:mysql://www.db4free.net:3306/hadisyah";
-            //String user ="ilhamhadisyah";
-            //String password = "qwertyuiop123";
-            String url = "jdbc:mysql://localhost:3306/apotik_db";
-            String user ="user1";
-            String password = "1234";
+            String url ="jdbc:mysql://www.db4free.net:3306/hadisyah";
+            String user ="ilhamhadisyah";
+            String password = "qwertyuiop123";
+            //String url = "jdbc:mysql://localhost:3306/apotik_db";
+            //String user ="user1";
+            //String password = "1234";
 
             con = DriverManager.getConnection(url,user,password); // database
             System.out.println("connected");
@@ -36,7 +36,6 @@ public class loadDriver {
     public boolean access(String No_faktur) throws SQLException {// used to login sesion and return boolean data type
         try {
             connect();
-
 
             pps = con.prepareStatement("select No_faktur from brg_in where No_faktur = ? ");
             pps.setString(1,No_faktur);

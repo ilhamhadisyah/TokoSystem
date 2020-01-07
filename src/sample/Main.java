@@ -23,7 +23,8 @@ public class Main extends Application {
 
         //launch(args);
         loadDriver loadDriver= new loadDriver();
-        loadDriver.connect();
-        loadDriver.access("1231");
+        //loadDriver.connect();
+        loadDriver.addItem();
+        //loadDriver.retrieveData();
     }
 }

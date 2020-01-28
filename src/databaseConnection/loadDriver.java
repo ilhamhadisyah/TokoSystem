@@ -43,7 +43,7 @@ public class loadDriver {
         Object jatuhTempo= new Timestamp(date.getTime());
         String harga=  "12";
         String disc="2";
-        String noBatch= "2";
+        String noBatch= "2ddd"  ;
         Object expDate=new Timestamp(date.getTime());
         String jumlahBarang = "10";
         try {

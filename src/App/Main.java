@@ -1,4 +1,5 @@
-package sample;
+package App;
+import App.view.PopUp.tambahBarangPopUpController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,10 +8,12 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Main extends Application {
+    private Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
+        this.primaryStage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("view/mainPage/mainPage.fxml"));
         primaryStage.setTitle("TokoSystem");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.setMaximized(true);
@@ -18,6 +21,9 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
 
     public static void main(String[] args) {
         launch(args);
@@ -25,5 +31,6 @@ public class Main extends Application {
         //loadDriver.connect();
         //loadDriver.addItem();
         //loadDriver.retrieveData();
+
     }
 }

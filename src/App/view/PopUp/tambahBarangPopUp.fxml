@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="334.0" style="-fx-background-color: forestgreen;" stylesheets="@../stylesheet/sample.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.PopUp.tambahBarangPopUpController">
+     <children>
+         <JFXTextField fx:id="itemNameForm" focusColor="WHITE" layoutX="23.0" layoutY="78.0" prefHeight="25.0" prefWidth="289.0" promptText="Nama Item" style="-fx-background-color: transparent;" unFocusColor="WHITE" />
+         <JFXTextField fx:id="noBatchForm" focusColor="WHITE" layoutX="23.0" layoutY="137.0" prefHeight="25.0" prefWidth="289.0" promptText="No Batch" style="-fx-background-color: transparent;" unFocusColor="WHITE" />
+         <JFXTextField fx:id="suplierForm" focusColor="WHITE" layoutX="23.0" layoutY="194.0" prefHeight="25.0" prefWidth="289.0" promptText="Suplier" style="-fx-background-color: transparent;" unFocusColor="WHITE" />
+         <JFXDatePicker fx:id="expDateForm" defaultColor="#c2cfc0" layoutX="23.0" layoutY="251.0" prefWidth="140.0" promptText="Expired Date" style="-fx-background-color: transparent;" />
+         <JFXDatePicker fx:id="JatuhTempoForm" defaultColor="#c2cfc0" layoutX="172.0" layoutY="251.0" prefWidth="140.0" promptText="Jatuh Tempo" style="-fx-background-color: transparent;" />
+         <JFXSlider fx:id="jumlahSlider" layoutX="23.0" layoutY="322.0" onMouseReleased="#jumlahDragAct" prefHeight="14.0" prefWidth="246.0" />
+         <Label layoutX="23.0" layoutY="291.0" text="Jumlah" textFill="WHITE">
+             <font>
+                 <Font size="18.0" />
+             </font>
+         </Label>
+         <JFXTextField fx:id="jumlahForm" alignment="TOP_CENTER" focusColor="WHITE" layoutX="271.0" layoutY="306.0" prefHeight="25.0" prefWidth="41.0" promptText="0" style="-fx-background-color: transparent;" unFocusColor="WHITE" />
+         <JFXTextField fx:id="hargaSatuan" focusColor="WHITE" layoutX="23.0" layoutY="351.0" prefHeight="25.0" prefWidth="289.0" promptText="Harga Satuan" unFocusColor="WHITE" />
+         <JFXComboBox fx:id="jenisKesediaan" focusColor="WHITE" layoutX="172.0" layoutY="404.0" prefHeight="25.0" prefWidth="139.0" promptText="Jenis Kesediaan" stylesheets="@../stylesheet/popUp.css" unFocusColor="WHITE" />
+         <JFXTextField fx:id="diskon" focusColor="WHITE" layoutX="23.0" layoutY="404.0" prefHeight="25.0" prefWidth="132.0" promptText="Diskon" unFocusColor="WHITE" />
+         <JFXDatePicker fx:id="tanggalFaktur" defaultColor="#c2cfc0" layoutX="23.0" layoutY="457.0" prefHeight="25.0" prefWidth="140.0" promptText="Tanggal Faktur" />
+         <JFXTextField fx:id="noFaktur" focusColor="WHITE" layoutX="180.0" layoutY="457.0" prefWidth="132.0" promptText="No Faktur" unFocusColor="WHITE" />
+         <JFXButton fx:id="tambahDataBtn" layoutX="37.0" layoutY="555.0" mnemonicParsing="false" onAction="#addBtnAction" prefHeight="30.0" prefWidth="260.0" ripplerFill="#38ab30" style="-fx-background-color: white;" text="Tambah Data" />
+         <JFXTextField fx:id="kodeBarang" focusColor="WHITE" layoutX="22.0" layoutY="504.0" promptText="Kode Barang" unFocusColor="WHITE" />
+      <Label layoutX="100.0" layoutY="23.0" prefHeight="26.0" prefWidth="135.0" text="Tambah Barang" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="backBtn" layoutX="37.0" layoutY="599.0" mnemonicParsing="false" onAction="#backBtnAction" prefHeight="30.0" prefWidth="260.0" style="-fx-background-color: white;" text="Kembali" />
+     </children>
+     <padding>
+         <Insets left="10.0" />
+     </padding>
+ </AnchorPane>

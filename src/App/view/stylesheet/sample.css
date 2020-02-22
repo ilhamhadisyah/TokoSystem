@@ -55,7 +55,7 @@
 }
 
 .jfx-text-field {
-    -fx-prompt-text-fill: floralwhite;
+    -fx-prompt-text-fill: black;
     -fx-text-fill: floralwhite;
 }
 

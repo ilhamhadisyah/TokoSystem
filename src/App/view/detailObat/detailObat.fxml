@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="611.0" prefWidth="327.0" style="-fx-background-color: forestgreen;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.detailObatController">
+<AnchorPane prefHeight="611.0" prefWidth="327.0" style="-fx-background-color: forestgreen;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.detailObat.detailObatController">
    <children>
       <AnchorPane layoutX="21.0" layoutY="27.0" prefHeight="102.0" prefWidth="286.0">
          <children>

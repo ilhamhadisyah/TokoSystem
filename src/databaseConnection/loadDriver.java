@@ -11,12 +11,6 @@ public class loadDriver {
     Statement st;
     ResultSet rs;
     PreparedStatement pps;
-    String temp;
-    String namaTemp, nimTemp, emailTemp, TTLTemp, alamatTemp, noHPTemp, JKTemp, passWordTemp, semesterTemp;
-
-    Date date= new Date();
-
-
 
     public void connect(){ // database connection (needed in any conection)
 
@@ -35,21 +29,15 @@ public class loadDriver {
         }
     }
 
-    public void addItem() {// used to login sesion and return boolean data type
-
-        String namaBarang="paracetzmol";
-        String suplier="viva";
-        String noFaktur="3334";
-        Object jatuhTempo= new Timestamp(date.getTime());
-        String harga=  "12";
-        String disc="2";
-        String noBatch= "2ddd"  ;
-        Object expDate=new Timestamp(date.getTime());
-        String jumlahBarang = "10";
+    public void addItem(String namaBarang, String suplier,
+                        String noFaktur, String jenisSediaan,
+                        String noBatch, int jumlahBarang, int harga,
+                        int diskon, int totalHarga, java.sql.Date expDate,
+                        java.sql.Date jatuhTempo,String kodeBarang) {// used to login sesion and return boolean data type
         try {
             connect();
             pps = con.prepareStatement("INSERT INTO brg_in (suplier, no_faktur,jatuh_tempo,nama_barang,jml_barang,harga,disc,No_batch,exp_date) " +
-                    "VALUES ('"+suplier+"',"+noFaktur+",'"+jatuhTempo+"','"+namaBarang+"',"+jumlahBarang+","+harga+","+disc+","+noBatch+",'"+expDate+"');");
+                    "VALUES ('"+suplier+"',"+noFaktur+",'"+jatuhTempo+"','"+namaBarang+"',"+jumlahBarang+","+harga+","+diskon+","+noBatch+",'"+expDate+"');");
             pps.executeUpdate();
         } catch (SQLException e) {
             System.out.println("error :"+e.getMessage());

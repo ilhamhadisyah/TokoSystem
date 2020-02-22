@@ -1,4 +1,4 @@
-package sample;
+package App.view.detailObat;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;

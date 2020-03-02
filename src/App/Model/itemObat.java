@@ -3,39 +3,38 @@ package App.Model;
 import java.time.LocalDate;
 
 public class itemObat {
-    private String namaItem;
-    private String distributorAsal;
-    private String jenisSediaan;
-    private String noFaktur;
-    private String noBatch;
-    private int jumlahBarang;
-    private int hargaSatuan;
-    private int diskon;
-    private int totalHarga;
-    private String kodeBarang;
-    private String jenisKesediaan;
-    private LocalDate tglFaktur;
-    private LocalDate expDate;
-    private LocalDate jatuhTempo;
+    static public String namaItem;
+    static public String distributorAsal;
+    static public String jenisSediaan;
+    static public String noFaktur;
+    static public String noBatch;
+    static public int jumlahBarang;
+    static public int hargaSatuan;
+    static public int diskon;
+    static public int totalHarga;
+    static public String kodeBarang;
+    static public LocalDate tglFaktur;
+    static public LocalDate expDate;
+    static public LocalDate jatuhTempo;
 
-    public void clear(){
-        namaItem="";
-        distributorAsal="";
-        jenisSediaan="";
-        noFaktur="";
-        noBatch="";
-        jumlahBarang=0;
-        hargaSatuan =0;
-        diskon=0;
-        totalHarga=0;
-        kodeBarang="";
-        jenisSediaan="";
-        tglFaktur= LocalDate.now();
-        expDate= LocalDate.now();
-        jatuhTempo=LocalDate.now();
+    public void clear() {
+        namaItem = "";
+        distributorAsal = "";
+        jenisSediaan = "";
+        noFaktur = "";
+        noBatch = "";
+        jumlahBarang = 0;
+        hargaSatuan = 0;
+        diskon = 0;
+        totalHarga = 0;
+        kodeBarang = "";
+        jenisSediaan = "";
+        tglFaktur = LocalDate.now();
+        expDate = LocalDate.now();
+        jatuhTempo = LocalDate.now();
     }
 
-    public itemObat(String namaBarang,String distributorAsal,
+    public itemObat(String namaBarang, String distributorAsal,
                     String jenisSediaan, String noFaktur, String noBatch,
                     int jumlahBarang, int hargaBarang,int diskon,
                     LocalDate expDate,LocalDate jatuhTempo){
@@ -144,22 +143,12 @@ public class itemObat {
         this.jatuhTempo = jatuhTempo;
     }
 
-
-
     public String getKodeBarang() {
         return kodeBarang;
     }
 
     public void setKodeBarang(String kodeBarang) {
         this.kodeBarang = kodeBarang;
-    }
-
-    public String getJenisKesediaan() {
-        return jenisKesediaan;
-    }
-
-    public void setJenisKesediaan(String jenisKesediaan) {
-     this.jenisKesediaan = jenisKesediaan;
     }
 
     public LocalDate getTglFaktur() {

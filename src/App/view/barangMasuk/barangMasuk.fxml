@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="734.0" prefWidth="1056.0" stylesheets="@../stylesheet/sample.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.barangMasuk.barangMasukController">
+<AnchorPane prefHeight="734.0" prefWidth="1056.0" stylesheets="@../stylesheet/sample.css"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="App.view.barangMasuk.barangMasukController">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
         <children>
-            <JFXTreeTableView layoutX="13.0" layoutY="47.0" prefHeight="595.0" prefWidth="1025.0" />
-         <Label layoutX="13.0" layoutY="7.0" text="BARANG MASUK">
-            <font>
-               <Font name="System Bold" size="28.0" />
-            </font>
-         </Label>
-        </children></AnchorPane>
-   <JFXButton fx:id="tambahBarang" layoutX="847.0" layoutY="679.0" mnemonicParsing="false" onAction="#tambahBarangClicked" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: forestgreen;" text="Tambah Barang" textFill="WHITE" />
-      <JFXTextField fx:id="inFilter" layoutX="776.0" layoutY="14.0" prefWidth="261.0" promptText="Filter Nama / ID" />
+            <Label layoutX="13.0" layoutY="7.0" text="BARANG MASUK">
+                <font>
+                    <Font name="System Bold" size="28.0"/>
+                </font>
+            </Label>
+            <TableView fx:id="barangMasukTable" layoutX="14.0" layoutY="54.0" prefHeight="580.0" prefWidth="1030.0">
+                <columns>
+                    <TableColumn prefWidth="75.0" text="C1"/>
+                    <TableColumn prefWidth="75.0" text="C2"/>
+                </columns>
+            </TableView>
+        </children>
+    </AnchorPane>
+    <Button fx:id="tambahBarang" layoutX="847.0" layoutY="679.0" mnemonicParsing="false" onAction="#tambahBarangClicked"
+            prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: forestgreen;" text="Tambah Barang"
+            textFill="WHITE"/>
+    <TextField fx:id="inFilter" layoutX="776.0" layoutY="14.0" prefWidth="261.0" promptText="Filter Nama / ID"/>
+    <Button fx:id="coba" layoutX="958.0" layoutY="647.0" mnemonicParsing="false" onAction="#cobaClick" text="Button"/>
+    <Label layoutX="740.0" layoutY="16.0" text="Cari">
+        <font>
+            <Font size="15.0"/>
+        </font>
+    </Label>
+
 
 </AnchorPane>

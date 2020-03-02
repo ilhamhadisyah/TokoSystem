@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -23,32 +24,40 @@ import java.util.ResourceBundle;
 
 public class mainPageController implements Initializable {
 
-    public JFXButton exit;
-    public JFXButton minimize;
+    public Button exit;
+    public Button minimize;
     public Label clock;
-    public JFXTextField tanggalSekarang;
     public AnchorPane leftPane;
-    public JFXButton katalogTab;
-    public JFXButton barangMasukTab;
-    public JFXButton penjualanTab;
+    public Button katalogTab;
+    public Button barangMasukTab;
+    public Button penjualanTab;
     public StackPane padPane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-       Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, event -> {
-           LocalTime curent = LocalTime.now(); 
-           LocalDate curentDate = LocalDate.now();
-           Date date = new Date();
+        Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, event -> {
+            LocalTime curent = LocalTime.now();
+            LocalDate curentDate = LocalDate.now();
+            Date date = new Date();
 
-           //tanggalSekarang.setText(curentDate.getDayOfMonth()+"/"+curentDate.getMonthValue()+"/"+curentDate.getYear());
-           clock.setText(curent.getHour()+":"+curent.getMinute()+":"+curent.getSecond());
-       }),
-               new KeyFrame(Duration.seconds(1))
-       );
-       timeline.setCycleCount(Animation.INDEFINITE);
-       timeline.play();
+            clock.setText(curent.getHour() + ":" + curent.getMinute() + ":" + curent.getSecond());
+        }),
+                new KeyFrame(Duration.seconds(1))
+        );
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+
+        padPane.getChildren().clear();
+        AnchorPane katalog = null;
+        try {
+            katalog = FXMLLoader.load(getClass().getClassLoader().getResource("App/view/penjualan/penjualan.fxml"));
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        padPane.getChildren().add(katalog);
     }
+
 
     public void getKatalog() {
         padPane.getChildren().clear();
@@ -91,7 +100,6 @@ public class mainPageController implements Initializable {
         Stage stage = (Stage) exit.getScene().getWindow();
         stage.setIconified(true);
     }
-
 
     public void katalogClicked(ActionEvent actionEvent) {
        getKatalog();

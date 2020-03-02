@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXListView?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="690.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.penjualan.penjualanController">
+<AnchorPane prefHeight="690.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.penjualan.penjualanController">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
         <children>
-            <JFXTreeTableView layoutX="355.0" layoutY="58.0" prefHeight="632.0" prefWidth="341.0" />
-            <JFXListView layoutX="709.0" layoutY="61.0" prefHeight="413.0" prefWidth="344.0" />
-            <JFXTextField layoutX="21.0" layoutY="58.0" prefHeight="25.0" prefWidth="277.0" promptText="Nama Customer" />
-            <AnchorPane layoutX="709.0" layoutY="484.0" prefHeight="195.0" prefWidth="344.0" style="-fx-background-color: forestgreen;" stylesheets="@../stylesheet/popUp.css">
+            <TreeTableView layoutX="355.0" layoutY="98.0" prefHeight="592.0" prefWidth="341.0"/>
+            <ListView layoutX="709.0" layoutY="61.0" prefHeight="413.0" prefWidth="344.0"/>
+            <TextField layoutX="21.0" layoutY="58.0" prefHeight="25.0" prefWidth="277.0" promptText="Nama Customer"/>
+            <AnchorPane layoutX="709.0" layoutY="484.0" prefHeight="195.0" prefWidth="344.0"
+                        style="-fx-background-color: forestgreen;" stylesheets="@../stylesheet/popUp.css">
                 <children>
-                    <JFXButton fx:id="selesaiBtn" layoutX="13.0" layoutY="117.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="313.0" style="-fx-background-color: white;" text="Selesai" />
+                    <Button fx:id="selesaiBtn" layoutX="13.0" layoutY="117.0" mnemonicParsing="false" prefHeight="41.0"
+                            prefWidth="313.0" style="-fx-background-color: white;" text="Selesai"/>
                     <Label layoutX="13.0" layoutY="14.0" text="Total Harga" textFill="#f5f5f5">
                         <font>
-                            <Font size="17.0" />
+                            <Font size="17.0"/>
                         </font>
                     </Label>
                     <Label layoutX="14.0" layoutY="45.0" text="Rp" textFill="WHITE">
                         <font>
-                            <Font name="System Bold" size="36.0" />
+                            <Font name="System Bold" size="36.0"/>
                         </font>
                     </Label>
                     <Label layoutX="80.0" layoutY="45.0" text="Label" textFill="WHITE">
                         <font>
-                            <Font name="System Bold" size="36.0" />
+                            <Font name="System Bold" size="36.0"/>
                         </font>
                     </Label>
                 </children>
             </AnchorPane>
-         <Label layoutX="19.0" layoutY="14.0" text="PENJUALAN">
-            <font>
-               <Font name="System Bold" size="28.0" />
-            </font>
-         </Label>
+            <Label layoutX="19.0" layoutY="14.0" text="PENJUALAN">
+                <font>
+                    <Font name="System Bold" size="28.0"/>
+                </font>
+            </Label>
         </children>
     </AnchorPane>
+    <TextField layoutX="395.0" layoutY="65.0" prefHeight="25.0" prefWidth="300.0" promptText="Filter ID /Nama"/>
+    <Label layoutX="354.0" layoutY="67.0" text="Cari">
+        <font>
+            <Font size="15.0"/>
+        </font>
+    </Label>
 </AnchorPane>

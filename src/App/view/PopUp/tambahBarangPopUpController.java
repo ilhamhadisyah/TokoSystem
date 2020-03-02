@@ -4,6 +4,7 @@ import App.Model.itemObat;
 import com.jfoenix.controls.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -11,28 +12,29 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class tambahBarangPopUpController implements Initializable {
-    public JFXTextField itemNameForm;
-    public JFXTextField noBatchForm;
-    public JFXTextField suplierForm;
-    public JFXDatePicker expDateForm;
-    public JFXDatePicker JatuhTempoForm;
-    public JFXSlider jumlahSlider;
-    public JFXTextField jumlahForm;
-    public JFXButton tambahDataBtn;
-    public JFXTextField hargaSatuan;
-    public JFXComboBox jenisKesediaan;
-    public JFXTextField diskon;
-    public JFXDatePicker tanggalFaktur;
-    public JFXTextField noFaktur;
-    public JFXTextField kodeBarang;
-    private Stage stage=null;
-    private itemObat result=null;
+    public TextField itemNameForm;
+    public TextField noBatchForm;
+    public TextField suplierForm;
+    public DatePicker expDateForm;
+    public DatePicker JatuhTempoForm;
+    public Slider jumlahSlider;
+    public TextField jumlahForm;
+    public Button tambahDataBtn;
+    public TextField hargaSatuan;
+    public ComboBox jenisKesediaan;
+    public TextField diskon;
+    public DatePicker tanggalFaktur;
+    public TextField noFaktur;
+    public TextField kodeBarang;
+    public Button backBtn;
+    private Stage stage = null;
+    private itemObat result = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        jenisKesediaan.getItems().addAll("1","2");
-
+        jenisKesediaan.getItems().addAll("1", "2");
+        stage = new Stage();
 
     }
 
@@ -46,6 +48,7 @@ public class tambahBarangPopUpController implements Initializable {
     }
 
     private void closeStage() {
+        stage = (Stage) backBtn.getScene().getWindow();
         if(stage!=null) {
             stage.close();
         }
@@ -56,26 +59,26 @@ public class tambahBarangPopUpController implements Initializable {
     }
 
     public void backBtnAction(ActionEvent actionEvent) {
-        this.stage.close();
+        stage = (Stage) backBtn.getScene().getWindow();
+        stage.close();
     }
 
     public void addBtnAction(ActionEvent actionEvent) {
-
-            result.clear();
-            result.setNamaItem(itemNameForm.getText());
-            result.setNoBatch(noBatchForm.getText());
-            result.setDistributorAsal(suplierForm.getText());
-            result.setExpDate(expDateForm.getValue());
-            result.setJatuhTempo(JatuhTempoForm.getValue());
-            result.setJumlahBarang(Integer.parseInt(jumlahForm.getText()));
-            result.setHargaSatuan(Integer.parseInt(hargaSatuan.getText()));
-            result.setDiskon(Integer.parseInt(diskon.getText()));
-            result.setTglFaktur(tanggalFaktur.getValue());
-            result.setTotalHarga(Integer.parseInt(hargaSatuan.getText())*Integer.parseInt(jumlahForm.getText()));
-            result.setNoFaktur(noFaktur.getText());
-            result.setKodeBarang(kodeBarang.getText());
-            result.setJenisKesediaan(jenisKesediaan.getSelectionModel().getSelectedItem().toString());
-            closeStage();
+        result = new itemObat();
+        result.namaItem = itemNameForm.getText();
+        result.noBatch = noBatchForm.getText();
+        result.distributorAsal = suplierForm.getText();
+        result.expDate = expDateForm.getValue();
+        result.jatuhTempo = JatuhTempoForm.getValue();
+        result.jumlahBarang = Integer.parseInt(jumlahForm.getText());
+        result.hargaSatuan = Integer.parseInt(hargaSatuan.getText());
+        result.diskon = Integer.parseInt(diskon.getText());
+        result.tglFaktur = tanggalFaktur.getValue();
+        result.totalHarga = Integer.parseInt(hargaSatuan.getText()) * Integer.parseInt(jumlahForm.getText());
+        result.noFaktur = noFaktur.getText();
+        result.kodeBarang = kodeBarang.getText();
+        result.jenisSediaan = jenisKesediaan.getSelectionModel().getSelectedItem().toString();
+        closeStage();
 
     }
 }

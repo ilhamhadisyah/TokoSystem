@@ -16,8 +16,8 @@
             </Label>
             <TableView fx:id="barangMasukTable" layoutX="14.0" layoutY="54.0" prefHeight="580.0" prefWidth="1030.0">
                 <columns>
-                    <TableColumn prefWidth="75.0" text="C1"/>
-                    <TableColumn prefWidth="75.0" text="C2"/>
+                    <TableColumn fx:id="idItem" prefWidth="75.0" text="ID Item"/>
+                    <TableColumn fx:id="namaItem" prefWidth="90.0" text="Nama Item"/>
                 </columns>
             </TableView>
         </children>

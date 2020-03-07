@@ -20,7 +20,7 @@ import javafx.stage.StageStyle;
 import javax.swing.text.TabableView;
 import java.io.IOException;
 import java.net.URL;
-import java.security.spec.RSAOtherPrimeInfo;
+
 import java.util.ResourceBundle;
 
 public class barangMasukController extends abstractController implements Initializable {
@@ -28,7 +28,10 @@ public class barangMasukController extends abstractController implements Initial
     public TextField inFilter;
     public Button coba;
     public TableView barangMasukTable;
+    public TableColumn idItem;
+    public TableColumn namaItem;
     itemObat itemObat = new itemObat();
+    public TableCell nama;
 
 
     @Override

@@ -8,7 +8,7 @@
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.penjualan.penjualanController">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
         <children>
-            <TreeTableView layoutX="355.0" layoutY="98.0" prefHeight="592.0" prefWidth="341.0"/>
+            <TableView layoutX="355.0" layoutY="98.0" prefHeight="592.0" prefWidth="341.0"/>
             <ListView layoutX="709.0" layoutY="61.0" prefHeight="413.0" prefWidth="344.0"/>
             <TextField layoutX="21.0" layoutY="58.0" prefHeight="25.0" prefWidth="277.0" promptText="Nama Customer"/>
             <AnchorPane layoutX="709.0" layoutY="484.0" prefHeight="195.0" prefWidth="344.0"

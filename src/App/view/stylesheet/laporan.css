@@ -1,0 +1,24 @@
+#jumlahBarangMasukPane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 1, 5, 1, 1);
+}
+
+#jumlahBarangTerjualPane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 1, 5, 1, 1);
+}
+
+#jumlahAnggaranKeluarPane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 1, 5, 1, 1);
+}
+
+#jumlahPemasukanPane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 1, 5, 1, 1);
+}
+
+#labaPane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 1, 5, 1, 1);
+}

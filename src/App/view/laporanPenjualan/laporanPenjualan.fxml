@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="768.0" prefWidth="600.0" stylesheets="@../stylesheet/mainStylesheet.css"
+            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="App.view.laporanPenjualan.laporanPenjualanController">
+    <children>
+
+        <AnchorPane layoutX="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="732.0" prefWidth="1056.0"
+                    style="-fx-background-color: #f6f6f6;" stylesheets="@../stylesheet/laporan.css"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TableView fx:id="tableRingkasan" layoutX="605.0" layoutY="269.0" prefHeight="454.0" prefWidth="441.0"
+                           AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="605.0" AnchorPane.rightAnchor="10.0"
+                           AnchorPane.topAnchor="269.0">
+
+                </TableView>
+                <TextField fx:id="katalogFilter" layoutX="900.0" layoutY="244.0" prefHeight="25.0" prefWidth="144.0"
+                           promptText="Filter Nama / ID" style="-fx-background-color: white;"
+                           AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="244.0"/>
+                <Label layoutX="62.0" layoutY="14.0" text="LAPORAN PENJUALAN">
+                    <font>
+                        <Font name="System Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="868.0" layoutY="246.0" text="Cari" AnchorPane.rightAnchor="162.0"
+                       AnchorPane.topAnchor="246.0">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../asset/report.png"/>
+                    </image>
+                </ImageView>
+                <Pane fx:id="jumlahBarangMasukPane" layoutX="12.0" layoutY="93.0" prefHeight="99.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="Total Barang Masuk">
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Separator layoutX="2.0" layoutY="26.0" prefHeight="1.0" prefWidth="200.0"/>
+                    </children>
+                </Pane>
+                <Pane fx:id="jumlahBarangTerjualPane" layoutX="220.0" layoutY="93.0" prefHeight="99.0"
+                      prefWidth="200.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="Total Item Terjual">
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Separator layoutY="26.0" prefWidth="200.0"/>
+                    </children>
+                </Pane>
+                <Pane fx:id="jumlahAnggaranKeluarPane" layoutX="428.0" layoutY="93.0" prefHeight="99.0"
+                      prefWidth="200.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="Anggaran Keluar">
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Separator layoutY="26.0" prefWidth="200.0"/>
+                    </children>
+                </Pane>
+                <Pane fx:id="jumlahPemasukanPane" layoutX="635.0" layoutY="93.0" prefHeight="99.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="Jumlah Pemasukan">
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Separator layoutY="27.0" prefWidth="200.0"/>
+                    </children>
+                </Pane>
+                <Pane fx:id="labaPane" layoutX="843.0" layoutY="93.0" prefHeight="99.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="2.0" text="Laba">
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Separator layoutY="27.0" prefWidth="200.0"/>
+                    </children>
+                </Pane>
+                <LineChart layoutX="12.0" layoutY="243.0" prefHeight="287.0" prefWidth="580.0">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT"/>
+                    </yAxis>
+                </LineChart>
+                <ChoiceBox layoutX="892.0" layoutY="54.0" prefWidth="150.0"/>
+                <Label layoutX="607.0" layoutY="218.0" text="Ringkasan  Penjualan">
+                    <font>
+                        <Font size="19.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+
+</AnchorPane>

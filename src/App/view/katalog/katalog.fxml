@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesheet/sample.css"
-            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+<AnchorPane prefHeight="768.0" prefWidth="600.0" stylesheets="@../stylesheet/mainStylesheet.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="App.view.katalog.katalogController">
+    <children>
 
-    <AnchorPane layoutX="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="732.0" prefWidth="1056.0"
-                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <children>
-            <TableView fx:id="tableViewKatalog" layoutX="13.0" layoutY="45.0" prefHeight="686.0" prefWidth="1025.0"/>
-            <TextField fx:id="katalogFilter" layoutX="777.0" layoutY="14.0" prefHeight="25.0" prefWidth="261.0"
-                       promptText="Filter Nama / ID" style="-fx-background-color: white;"/>
-            <Label layoutX="13.0" layoutY="6.0" text="KATALOG">
-                <font>
-                    <Font name="System Bold" size="28.0"/>
-                </font>
-            </Label>
-            <Label layoutX="741.0" layoutY="16.0" text="Cari">
-                <font>
-                    <Font size="15.0"/>
-                </font>
-            </Label>
-        </children></AnchorPane>
+        <AnchorPane layoutX="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="732.0" prefWidth="1056.0"
+                    style="-fx-background-color: #f6f6f6;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TableView fx:id="tableViewKatalog" layoutX="3.0" layoutY="46.0" prefHeight="686.0" prefWidth="1025.0"/>
+                <TextField fx:id="katalogFilter" layoutX="777.0" layoutY="14.0" prefHeight="25.0" prefWidth="261.0"
+                           promptText="Filter Nama / ID" style="-fx-background-color: white;"/>
+                <Label layoutX="58.0" layoutY="6.0" text="KATALOG">
+                    <font>
+                        <Font name="System Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="741.0" layoutY="16.0" text="Cari">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="11.0" layoutY="4.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../asset/catalog.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
 
 </AnchorPane>

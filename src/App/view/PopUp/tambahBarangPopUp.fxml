@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="644.0" prefWidth="334.0" style="-fx-background-color: grey;"
-            stylesheets="@../stylesheet/sample.css" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            stylesheets="@../stylesheet/mainStylesheet.css" xmlns="http://javafx.com/javafx/10.0.2-internal"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.PopUp.tambahBarangPopUpController">
     <children>
         <TextField fx:id="itemNameForm" layoutX="23.0" layoutY="78.0" prefHeight="25.0" prefWidth="289.0"
@@ -38,7 +38,7 @@
                     promptText="Tanggal Faktur"/>
         <TextField fx:id="noFaktur" layoutX="180.0" layoutY="457.0" prefWidth="132.0" promptText="No Faktur"/>
         <Button fx:id="tambahDataBtn" layoutX="37.0" layoutY="555.0" mnemonicParsing="false" onAction="#addBtnAction"
-                prefHeight="30.0" prefWidth="260.0" style="-fx-background-color: white;" text="Tambah Data"/>
+                prefHeight="30.0" prefWidth="260.0" text="Tambah Data"/>
         <TextField fx:id="kodeBarang" layoutX="22.0" layoutY="504.0" promptText="Kode Barang"/>
         <Label layoutX="100.0" layoutY="23.0" prefHeight="26.0" prefWidth="135.0" text="Tambah Barang">
             <font>
@@ -46,7 +46,7 @@
             </font>
         </Label>
         <Button fx:id="backBtn" layoutX="37.0" layoutY="599.0" mnemonicParsing="false" onAction="#backBtnAction"
-                prefHeight="30.0" prefWidth="260.0" style="-fx-background-color: white;" text="Kembali"/>
+                prefHeight="30.0" prefWidth="260.0" text="Kembali"/>
     </children>
     <padding>
         <Insets left="10.0"/>

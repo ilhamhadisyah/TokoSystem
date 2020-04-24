@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="734.0" prefWidth="1056.0" stylesheets="@../stylesheet/sample.css"
-            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="App.view.barangMasuk.barangMasukController">
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-        <children>
-            <Label layoutX="13.0" layoutY="7.0" text="BARANG MASUK">
-                <font>
-                    <Font name="System Bold" size="28.0"/>
-                </font>
-            </Label>
-            <TableView fx:id="barangMasukTable" layoutX="14.0" layoutY="54.0" prefHeight="580.0" prefWidth="1030.0">
-                <columns>
-                    <TableColumn fx:id="idItem" prefWidth="75.0" text="ID Item"/>
-                    <TableColumn fx:id="namaItem" prefWidth="90.0" text="Nama Item"/>
-                </columns>
-            </TableView>
-        </children>
-    </AnchorPane>
-    <Button fx:id="tambahBarang" layoutX="847.0" layoutY="679.0" mnemonicParsing="false" onAction="#tambahBarangClicked"
-            prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: forestgreen;" text="Tambah Barang"
-            textFill="WHITE"/>
-    <TextField fx:id="inFilter" layoutX="776.0" layoutY="14.0" prefWidth="261.0" promptText="Filter Nama / ID"/>
-    <Button fx:id="coba" layoutX="958.0" layoutY="647.0" mnemonicParsing="false" onAction="#cobaClick" text="Button"/>
-    <Label layoutX="740.0" layoutY="16.0" text="Cari">
-        <font>
-            <Font size="15.0"/>
-        </font>
-    </Label>
+<AnchorPane prefHeight="768.0" prefWidth="1056.0" style="-fx-background-color: #f6f6f6;"
+            stylesheets="@../stylesheet/mainStylesheet.css" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.view.barangMasuk.barangMasukController">
+    <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <Label layoutX="64.0" layoutY="7.0" text="BARANG MASUK">
+                    <font>
+                        <Font name="System Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <VBox fx:id="tableVBox" layoutX="14.0" layoutY="54.0">
+                    <children>
+                        <TableView fx:id="barangMasukTable" prefHeight="589.0" prefWidth="1030.0"/>
+                    </children>
+                </VBox>
+                <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../asset/download.png"/>
+                    </image>
+                </ImageView>
+
+            </children>
+        </AnchorPane>
+        <Button fx:id="tambahBarang" layoutX="847.0" layoutY="683.0" mnemonicParsing="false"
+                onAction="#tambahBarangClicked" prefHeight="25.0" prefWidth="170.0"
+                style="-fx-background-color: forestgreen;" text="Tambah Barang" textFill="WHITE"/>
+        <TextField fx:id="inFilter" layoutX="776.0" layoutY="14.0" prefWidth="261.0" promptText="Filter Nama / ID"/>
+        <Button fx:id="coba" layoutX="958.0" layoutY="651.0" mnemonicParsing="false" onAction="#cobaClick"
+                text="Button"/>
+        <Label layoutX="740.0" layoutY="16.0" text="Cari">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+    </children>
 
 
 </AnchorPane>

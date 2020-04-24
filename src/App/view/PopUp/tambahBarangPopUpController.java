@@ -1,7 +1,5 @@
 package App.view.PopUp;
 
-import App.Model.itemObat;
-import com.jfoenix.controls.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -28,7 +26,7 @@ public class tambahBarangPopUpController implements Initializable {
     public TextField kodeBarang;
     public Button backBtn;
     private Stage stage = null;
-    private itemObat result = null;
+    //private itemObat result = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -49,14 +47,17 @@ public class tambahBarangPopUpController implements Initializable {
 
     private void closeStage() {
         stage = (Stage) backBtn.getScene().getWindow();
-        if(stage!=null) {
+        if (stage != null) {
             stage.close();
         }
     }
 
+    /*
     public itemObat getResult() {
         return result;
     }
+
+     */
 
     public void backBtnAction(ActionEvent actionEvent) {
         stage = (Stage) backBtn.getScene().getWindow();
@@ -64,21 +65,6 @@ public class tambahBarangPopUpController implements Initializable {
     }
 
     public void addBtnAction(ActionEvent actionEvent) {
-        result = new itemObat();
-        result.namaItem = itemNameForm.getText();
-        result.noBatch = noBatchForm.getText();
-        result.distributorAsal = suplierForm.getText();
-        result.expDate = expDateForm.getValue();
-        result.jatuhTempo = JatuhTempoForm.getValue();
-        result.jumlahBarang = Integer.parseInt(jumlahForm.getText());
-        result.hargaSatuan = Integer.parseInt(hargaSatuan.getText());
-        result.diskon = Integer.parseInt(diskon.getText());
-        result.tglFaktur = tanggalFaktur.getValue();
-        result.totalHarga = Integer.parseInt(hargaSatuan.getText()) * Integer.parseInt(jumlahForm.getText());
-        result.noFaktur = noFaktur.getText();
-        result.kodeBarang = kodeBarang.getText();
-        result.jenisSediaan = jenisKesediaan.getSelectionModel().getSelectedItem().toString();
-        closeStage();
 
     }
 }

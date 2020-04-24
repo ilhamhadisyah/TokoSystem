@@ -1,7 +1,26 @@
-.jfx-button{
-    -fx-border-radius: 0pt;
-    -fx-background-radius: 0pt;
-    -fx-background-color: black;
+.button {
+    -fx-background-color: #2bd62b;
     -fx-text-fill: white;
 }
 
+.button:hover {
+    -fx-background-color: #228B22;
+}
+
+#deleteSelectedItem {
+    -fx-background-color: red;
+}
+
+#deleteSelectedItem:hover {
+    -fx-background-color: #d40000;
+}
+
+.popup {
+    -fx-background-color: #ff230d;
+    -fx-padding: 10;
+    -fx-border-radius: 25px;
+    -fx-text-fill: white;
+    -fx-border-width: 0;
+    -fx-font-size: 16;
+
+}

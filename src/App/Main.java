@@ -17,7 +17,7 @@ public class Main extends Application {
         primaryStage.setTitle("TokoSystem");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.setMaximized(true);
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 

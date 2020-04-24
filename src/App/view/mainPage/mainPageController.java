@@ -32,6 +32,7 @@ public class mainPageController implements Initializable {
     public Button barangMasukTab;
     public Button penjualanTab;
     public StackPane padPane;
+    public Button laporanPenjualanTab;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -51,7 +52,7 @@ public class mainPageController implements Initializable {
         padPane.getChildren().clear();
         AnchorPane katalog = null;
         try {
-            katalog = FXMLLoader.load(getClass().getClassLoader().getResource("App/view/penjualan/penjualan.fxml"));
+            katalog = FXMLLoader.load(getClass().getClassLoader().getResource("App/view/kasir/penjualan.fxml"));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -81,28 +82,30 @@ public class mainPageController implements Initializable {
         padPane.getChildren().add(brgMasuk);
     }
 
+    public void getLaporanPenjualan() {
+        padPane.getChildren().clear();
+        AnchorPane laporan = null;
+        try {
+            laporan = FXMLLoader.load(getClass().getClassLoader().getResource("App/view/laporanPenjualan/laporanPenjualan.fxml"));
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        padPane.getChildren().add(laporan);
+    }
+
     public void getPenjualan() {
         padPane.getChildren().clear();
         AnchorPane katalog = null;
         try {
-            katalog = FXMLLoader.load(getClass().getClassLoader().getResource("App/view/penjualan/penjualan.fxml"));
+            katalog = FXMLLoader.load(getClass().getClassLoader().getResource("App/view/kasir/penjualan.fxml"));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
         padPane.getChildren().add(katalog);
     }
 
-    public void exitPress(ActionEvent actionEvent) {
-        Stage stage = (Stage) exit.getScene().getWindow();
-        stage.close();
-    }
-    public void minizePress(ActionEvent actionEvent) {
-        Stage stage = (Stage) exit.getScene().getWindow();
-        stage.setIconified(true);
-    }
-
     public void katalogClicked(ActionEvent actionEvent) {
-       getKatalog();
+        getKatalog();
     }
 
     public void barangMasukClicked(ActionEvent actionEvent) {
@@ -111,5 +114,9 @@ public class mainPageController implements Initializable {
 
     public void penjualanClicked(ActionEvent actionEvent) {
         getPenjualan();
+    }
+
+    public void laporanPenjualanClicked(ActionEvent actionEvent) {
+        getLaporanPenjualan();
     }
 }
